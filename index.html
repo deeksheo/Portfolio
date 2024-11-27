@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deeksha Sheoran - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #091325;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+            background: #03537e;
+            color: #fff;
+        }
+
+        .hero h1 {
+            margin-bottom: 10px;
+        }
+
+        .hero .button {
+            background: #e8810c;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bio-data.html">Bio-data</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Deeksha Sheoran</h1>
+        <p id="greeting"></p> <!-- Dynamic Greeting -->
+        <p>A passionate Computer Science Engineering student aspiring to excel in technology-driven projects.</p>
+        <a href="resume.html" class="button">View Resume</a>
+    </section>
+    <script>
+        // Dynamic greeting based on the time of day
+        document.addEventListener("DOMContentLoaded", () => {
+            const greetingElement = document.getElementById("greeting");
+            const hours = new Date().getHours();
+
+            if (hours < 12) {
+                greetingElement.innerText = "Good Morning!";
+            } else if (hours < 18) {
+                greetingElement.innerText = "Good Afternoon!";
+            } else {
+                greetingElement.innerText = "Good Evening!";
+            }
+        });
+    </script>
+</body>
+</html>
+
+
